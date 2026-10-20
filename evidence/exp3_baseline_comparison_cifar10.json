@@ -1,0 +1,1008 @@
+{
+  "config": {
+    "data_root": "./data",
+    "dataset": "cifar10",
+    "num_classes": 10,
+    "epochs": 50,
+    "seeds": 5,
+    "K": 3,
+    "repr_dim": 64,
+    "batch_size": 128,
+    "workers": 0,
+    "device": "cuda",
+    "output": "results/exp3_baseline_comparison_cifar10.json",
+    "checkpoint_dir": "checkpoints/exp3_baseline_comparison_cifar10",
+    "allow_config_mismatch": false,
+    "lr": 0.1,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "lambda_out": 0.5,
+    "lambda_rep": 0.1,
+    "lambda_div": 0.1,
+    "d0": 1.0,
+    "eta": 1.0,
+    "T": 4.0,
+    "wml_lr": 0.1,
+    "wml_T": 3.0,
+    "wml_alpha": 0.1,
+    "wml_eta": 0.1,
+    "wml_update_w_step": 10,
+    "diffdml_margin": 0.5,
+    "diffdml_lambda_dpl": 1.0,
+    "dts_base_strength": 0.0,
+    "dts_step_strength": 0.15,
+    "synthetic_train_per_class": 200,
+    "synthetic_test_per_class": 40
+  },
+  "results": {
+    "independent": {
+      "seeds": [
+        {
+          "ensemble_acc": 0.8679,
+          "best_single_acc": 0.851,
+          "per_model_acc": [
+            0.8456,
+            0.851,
+            0.8478
+          ],
+          "prediction_disagreement_rate": 0.11883570675105486,
+          "prediction_symmetric_kl": 0.1745056513115323,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 2.0308724868146677,
+          "E_d0": 1.1153619606283647,
+          "representation_dispersion": 0.03279716046409139,
+          "seed": 0,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.868,
+          "best_single_acc": 0.8506,
+          "per_model_acc": [
+            0.8506,
+            0.8477,
+            0.8497
+          ],
+          "prediction_disagreement_rate": 0.12084651898734172,
+          "prediction_symmetric_kl": 0.17911188744542966,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 2.0627840108509305,
+          "E_d0": 1.1931954878794997,
+          "representation_dispersion": 0.032170839147948764,
+          "seed": 1,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8696,
+          "best_single_acc": 0.8524,
+          "per_model_acc": [
+            0.8515,
+            0.8524,
+            0.8514
+          ],
+          "prediction_disagreement_rate": 0.11372626582278474,
+          "prediction_symmetric_kl": 0.17172621333586513,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 1.934792598591575,
+          "E_d0": 0.9465171966371657,
+          "representation_dispersion": 0.027689806539329547,
+          "seed": 2,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8648,
+          "best_single_acc": 0.8511,
+          "per_model_acc": [
+            0.8455,
+            0.8441,
+            0.8511
+          ],
+          "prediction_disagreement_rate": 0.11959388185654007,
+          "prediction_symmetric_kl": 0.1734511730288655,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 1.9425340860704832,
+          "E_d0": 0.9461298064340519,
+          "representation_dispersion": 0.029007865009900137,
+          "seed": 3,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8693,
+          "best_single_acc": 0.8589,
+          "per_model_acc": [
+            0.8478,
+            0.8527,
+            0.8589
+          ],
+          "prediction_disagreement_rate": 0.1146162974683544,
+          "prediction_symmetric_kl": 0.1734113757997626,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 1.8704707516899592,
+          "E_d0": 0.7960519737835172,
+          "representation_dispersion": 0.029843541215869445,
+          "seed": 4,
+          "epochs_completed": 50,
+          "resumed": false
+        }
+      ],
+      "mean": {
+        "ensemble_acc": 0.86792,
+        "prediction_symmetric_kl": 0.17444126018429104,
+        "seed": 2.0,
+        "D_rep": 1.9682907868035229,
+        "E_d0": 0.9994512850725199,
+        "w": 2.0,
+        "representation_dispersion": 0.030301842475427852,
+        "best_single_acc": 0.8528,
+        "prediction_disagreement_rate": 0.11752373417721515,
+        "eta": 1.0,
+        "epochs_completed": 50.0,
+        "rho": 0.5,
+        "per_model_acc": [
+          0.8482,
+          0.8495799999999999,
+          0.85178
+        ]
+      }
+    },
+    "DML": {
+      "seeds": [
+        {
+          "ensemble_acc": 0.8656,
+          "best_single_acc": 0.8527,
+          "per_model_acc": [
+            0.8483,
+            0.8498,
+            0.8527
+          ],
+          "prediction_disagreement_rate": 0.10650712025316456,
+          "prediction_symmetric_kl": 0.135625840899562,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 2.032104717025274,
+          "E_d0": 1.1201872946340827,
+          "representation_dispersion": 0.02958063696381412,
+          "seed": 0,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8676,
+          "best_single_acc": 0.8532,
+          "per_model_acc": [
+            0.8514,
+            0.8532,
+            0.8514
+          ],
+          "prediction_disagreement_rate": 0.1041337025316456,
+          "prediction_symmetric_kl": 0.13326268460805915,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 2.0486423939089233,
+          "E_d0": 1.1608657535118392,
+          "representation_dispersion": 0.029388534683215468,
+          "seed": 1,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8657,
+          "best_single_acc": 0.8523,
+          "per_model_acc": [
+            0.8518,
+            0.847,
+            0.8523
+          ],
+          "prediction_disagreement_rate": 0.10555116033755275,
+          "prediction_symmetric_kl": 0.1376655490338048,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 1.9293193530432786,
+          "E_d0": 0.9331338330160214,
+          "representation_dispersion": 0.025179976621006107,
+          "seed": 2,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8679,
+          "best_single_acc": 0.8535,
+          "per_model_acc": [
+            0.8473,
+            0.8511,
+            0.8535
+          ],
+          "prediction_disagreement_rate": 0.10677083333333336,
+          "prediction_symmetric_kl": 0.13557824420149325,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 1.9274016422561453,
+          "E_d0": 0.9166266005250472,
+          "representation_dispersion": 0.02748719045208602,
+          "seed": 3,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.867,
+          "best_single_acc": 0.8535,
+          "per_model_acc": [
+            0.8497,
+            0.8535,
+            0.8519
+          ],
+          "prediction_disagreement_rate": 0.10611155063291138,
+          "prediction_symmetric_kl": 0.13494757217068215,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 1.8331030697762212,
+          "E_d0": 0.7278593944597848,
+          "representation_dispersion": 0.025683035248819784,
+          "seed": 4,
+          "epochs_completed": 50,
+          "resumed": false
+        }
+      ],
+      "mean": {
+        "ensemble_acc": 0.86676,
+        "prediction_symmetric_kl": 0.13541597818272028,
+        "seed": 2.0,
+        "D_rep": 1.9541142352019683,
+        "E_d0": 0.971734575229355,
+        "w": 2.0,
+        "representation_dispersion": 0.0274638747937883,
+        "best_single_acc": 0.85304,
+        "prediction_disagreement_rate": 0.10581487341772153,
+        "eta": 1.0,
+        "epochs_completed": 50.0,
+        "rho": 0.5,
+        "per_model_acc": [
+          0.8497,
+          0.85092,
+          0.85236
+        ],
+        "G_int": -0.0011599999999999833
+      }
+    },
+    "rep_without_diversity": {
+      "seeds": [
+        {
+          "ensemble_acc": 0.865,
+          "best_single_acc": 0.8512,
+          "per_model_acc": [
+            0.848,
+            0.8494,
+            0.8512
+          ],
+          "prediction_disagreement_rate": 0.1059467299578059,
+          "prediction_symmetric_kl": 0.12861234177579856,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.024694626349248464,
+          "E_d0": 0.9514135529723349,
+          "representation_dispersion": 8.072440005555938e-05,
+          "seed": 0,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8663,
+          "best_single_acc": 0.8512,
+          "per_model_acc": [
+            0.8512,
+            0.851,
+            0.8505
+          ],
+          "prediction_disagreement_rate": 0.10611155063291138,
+          "prediction_symmetric_kl": 0.13025953079954986,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.024605500995169713,
+          "E_d0": 0.9515925608103788,
+          "representation_dispersion": 7.539074693893412e-05,
+          "seed": 1,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8634,
+          "best_single_acc": 0.8484,
+          "per_model_acc": [
+            0.8462,
+            0.8484,
+            0.8484
+          ],
+          "prediction_disagreement_rate": 0.1055181962025317,
+          "prediction_symmetric_kl": 0.13058427070515063,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.02487192288795604,
+          "E_d0": 0.9510716712927516,
+          "representation_dispersion": 9.329493138777045e-05,
+          "seed": 2,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8679,
+          "best_single_acc": 0.8563,
+          "per_model_acc": [
+            0.8563,
+            0.8536,
+            0.8503
+          ],
+          "prediction_disagreement_rate": 0.10139767932489453,
+          "prediction_symmetric_kl": 0.12783726370787316,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.024740529470617258,
+          "E_d0": 0.9513316516634784,
+          "representation_dispersion": 0.0001011548512814201,
+          "seed": 3,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8685,
+          "best_single_acc": 0.8504,
+          "per_model_acc": [
+            0.847,
+            0.8504,
+            0.8504
+          ],
+          "prediction_disagreement_rate": 0.10551819620253167,
+          "prediction_symmetric_kl": 0.12892709376942765,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.024293692853254608,
+          "E_d0": 0.9521915671191638,
+          "representation_dispersion": 8.370583964278921e-05,
+          "seed": 4,
+          "epochs_completed": 50,
+          "resumed": false
+        }
+      ],
+      "mean": {
+        "ensemble_acc": 0.86622,
+        "prediction_symmetric_kl": 0.12924410015156,
+        "seed": 2.0,
+        "D_rep": 0.024641254511249218,
+        "E_d0": 0.9515202007716216,
+        "w": 2.0,
+        "representation_dispersion": 8.685415386129466e-05,
+        "best_single_acc": 0.8515,
+        "prediction_disagreement_rate": 0.10489847046413503,
+        "eta": 1.0,
+        "epochs_completed": 50.0,
+        "rho": 0.5,
+        "per_model_acc": [
+          0.8497399999999999,
+          0.8505600000000001,
+          0.85016
+        ],
+        "G_int": -0.0017000000000000127
+      }
+    },
+    "diversity_without_rep": {
+      "seeds": [
+        {
+          "ensemble_acc": 0.865,
+          "best_single_acc": 0.8542,
+          "per_model_acc": [
+            0.8542,
+            0.8508,
+            0.8505
+          ],
+          "prediction_disagreement_rate": 0.10901239451476798,
+          "prediction_symmetric_kl": 0.1351965467449482,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.9732766898372506,
+          "E_d0": 0.09368610721600207,
+          "representation_dispersion": 0.017309474475870404,
+          "seed": 0,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8672,
+          "best_single_acc": 0.8569,
+          "per_model_acc": [
+            0.8499,
+            0.8464,
+            0.8569
+          ],
+          "prediction_disagreement_rate": 0.10686972573839663,
+          "prediction_symmetric_kl": 0.1331302271487844,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.9803104068659529,
+          "E_d0": 0.07584885366355316,
+          "representation_dispersion": 0.02018811168219847,
+          "seed": 1,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8662,
+          "best_single_acc": 0.851,
+          "per_model_acc": [
+            0.851,
+            0.8494,
+            0.8492
+          ],
+          "prediction_disagreement_rate": 0.11052874472573831,
+          "prediction_symmetric_kl": 0.13474006573610667,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.9774176252039173,
+          "E_d0": 0.08763588493383384,
+          "representation_dispersion": 0.01564094822712337,
+          "seed": 2,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8646,
+          "best_single_acc": 0.8498,
+          "per_model_acc": [
+            0.8498,
+            0.8496,
+            0.8477
+          ],
+          "prediction_disagreement_rate": 0.11128691983122362,
+          "prediction_symmetric_kl": 0.1377520807999096,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.9759198442290101,
+          "E_d0": 0.1021905672512477,
+          "representation_dispersion": 0.017639539852927003,
+          "seed": 3,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8687,
+          "best_single_acc": 0.8533,
+          "per_model_acc": [
+            0.8533,
+            0.8491,
+            0.8533
+          ],
+          "prediction_disagreement_rate": 0.10762790084388185,
+          "prediction_symmetric_kl": 0.13547237396617476,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.9761743296550799,
+          "E_d0": 0.06845153358918202,
+          "representation_dispersion": 0.01795268754321563,
+          "seed": 4,
+          "epochs_completed": 50,
+          "resumed": false
+        }
+      ],
+      "mean": {
+        "ensemble_acc": 0.8663399999999999,
+        "prediction_symmetric_kl": 0.13525825887918472,
+        "seed": 2.0,
+        "D_rep": 0.976619779158242,
+        "E_d0": 0.08556258933076376,
+        "w": 2.0,
+        "representation_dispersion": 0.017746152356266975,
+        "best_single_acc": 0.85304,
+        "prediction_disagreement_rate": 0.10906513713080168,
+        "eta": 1.0,
+        "epochs_completed": 50.0,
+        "rho": 0.5,
+        "per_model_acc": [
+          0.85164,
+          0.84906,
+          0.85152
+        ],
+        "G_int": -0.0015800000000000037
+      }
+    },
+    "SML": {
+      "seeds": [
+        {
+          "ensemble_acc": 0.8667,
+          "best_single_acc": 0.8521,
+          "per_model_acc": [
+            0.8443,
+            0.8521,
+            0.8518
+          ],
+          "prediction_disagreement_rate": 0.10736418776371309,
+          "prediction_symmetric_kl": 0.12709472655369763,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.034843283787935594,
+          "E_d0": 0.9319484596011005,
+          "representation_dispersion": 0.00011056937562645106,
+          "seed": 0,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8643,
+          "best_single_acc": 0.8499,
+          "per_model_acc": [
+            0.8474,
+            0.8487,
+            0.8499
+          ],
+          "prediction_disagreement_rate": 0.11214398734177215,
+          "prediction_symmetric_kl": 0.1358168457442195,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.03565515535353105,
+          "E_d0": 0.9304059479810014,
+          "representation_dispersion": 0.00012490679746636637,
+          "seed": 1,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8649,
+          "best_single_acc": 0.8507,
+          "per_model_acc": [
+            0.8496,
+            0.85,
+            0.8507
+          ],
+          "prediction_disagreement_rate": 0.1071334388185654,
+          "prediction_symmetric_kl": 0.1328403079245664,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.03576072456338738,
+          "E_d0": 0.9302036151101317,
+          "representation_dispersion": 0.00012273256122827223,
+          "seed": 2,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8647,
+          "best_single_acc": 0.8519,
+          "per_model_acc": [
+            0.8519,
+            0.8501,
+            0.8461
+          ],
+          "prediction_disagreement_rate": 0.1050896624472574,
+          "prediction_symmetric_kl": 0.13447445649889456,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.036015816315819946,
+          "E_d0": 0.9297169024431253,
+          "representation_dispersion": 0.00012692358515916475,
+          "seed": 3,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8662,
+          "best_single_acc": 0.8536,
+          "per_model_acc": [
+            0.8495,
+            0.8536,
+            0.8524
+          ],
+          "prediction_disagreement_rate": 0.10634229957805905,
+          "prediction_symmetric_kl": 0.1339919033621434,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 0.035279136716942244,
+          "E_d0": 0.9311169483993627,
+          "representation_dispersion": 0.00011489043436661552,
+          "seed": 4,
+          "epochs_completed": 50,
+          "resumed": false
+        }
+      ],
+      "mean": {
+        "ensemble_acc": 0.8653600000000001,
+        "prediction_symmetric_kl": 0.13284364801670429,
+        "seed": 2.0,
+        "D_rep": 0.03551082334752324,
+        "E_d0": 0.9306783747069444,
+        "w": 2.0,
+        "representation_dispersion": 0.00012000455076937398,
+        "best_single_acc": 0.8516400000000001,
+        "prediction_disagreement_rate": 0.10761471518987342,
+        "eta": 1.0,
+        "epochs_completed": 50.0,
+        "rho": 0.5,
+        "per_model_acc": [
+          0.8485400000000001,
+          0.8509,
+          0.8501799999999999
+        ],
+        "G_int": -0.0025600000000000067
+      }
+    },
+    "WML": {
+      "seeds": [
+        {
+          "ensemble_acc": 0.9539,
+          "best_single_acc": 0.9486,
+          "per_model_acc": [
+            0.9477,
+            0.9486,
+            0.1,
+            0.948
+          ],
+          "prediction_disagreement_rate": 0.46960706751054854,
+          "prediction_symmetric_kl": 0.9301929984178847,
+          "rho": null,
+          "w": null,
+          "eta": null,
+          "d_star_squared_theory": null,
+          "D_rep": null,
+          "E_d0": null,
+          "representation_dispersion": null,
+          "wml_weights": [
+            0.11099904030561447,
+            0.6504201292991638,
+            2.802596928649634e-45,
+            0.2385808229446411
+          ],
+          "seed": 0,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.9531,
+          "best_single_acc": 0.9469,
+          "per_model_acc": [
+            0.9462,
+            0.9469,
+            0.1,
+            0.9458
+          ],
+          "prediction_disagreement_rate": 0.4712223101265824,
+          "prediction_symmetric_kl": 0.9341849524027742,
+          "rho": null,
+          "w": null,
+          "eta": null,
+          "d_star_squared_theory": null,
+          "D_rep": null,
+          "E_d0": null,
+          "representation_dispersion": null,
+          "wml_weights": [
+            0.3141302168369293,
+            0.584044873714447,
+            2.802596928649634e-45,
+            0.10182487964630127
+          ],
+          "seed": 1,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.9524,
+          "best_single_acc": 0.9494,
+          "per_model_acc": [
+            0.9484,
+            0.9494,
+            0.9493,
+            0.9483
+          ],
+          "prediction_disagreement_rate": 0.03853507383966245,
+          "prediction_symmetric_kl": 0.06633154800228525,
+          "rho": null,
+          "w": null,
+          "eta": null,
+          "d_star_squared_theory": null,
+          "D_rep": null,
+          "E_d0": null,
+          "representation_dispersion": null,
+          "wml_weights": [
+            0.0045765480026602745,
+            0.08030384033918381,
+            0.31141355633735657,
+            0.6037060618400574
+          ],
+          "seed": 2,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.9556,
+          "best_single_acc": 0.9506,
+          "per_model_acc": [
+            0.9506,
+            0.1,
+            0.9498,
+            0.9472
+          ],
+          "prediction_disagreement_rate": 0.46993670886075967,
+          "prediction_symmetric_kl": 0.9311538634582066,
+          "rho": null,
+          "w": null,
+          "eta": null,
+          "d_star_squared_theory": null,
+          "D_rep": null,
+          "E_d0": null,
+          "representation_dispersion": null,
+          "wml_weights": [
+            0.3853972256183624,
+            2.802596928649634e-45,
+            0.4696006774902344,
+            0.14500215649604797
+          ],
+          "seed": 3,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.9554,
+          "best_single_acc": 0.951,
+          "per_model_acc": [
+            0.9493,
+            0.9489,
+            0.951,
+            0.9471
+          ],
+          "prediction_disagreement_rate": 0.0373318829113924,
+          "prediction_symmetric_kl": 0.06622624983308628,
+          "rho": null,
+          "w": null,
+          "eta": null,
+          "d_star_squared_theory": null,
+          "D_rep": null,
+          "E_d0": null,
+          "representation_dispersion": null,
+          "wml_weights": [
+            0.407208114862442,
+            0.024058647453784943,
+            0.5447384119033813,
+            0.023994822055101395
+          ],
+          "seed": 4,
+          "epochs_completed": 50,
+          "resumed": false
+        }
+      ],
+      "mean": {
+        "ensemble_acc": 0.95408,
+        "prediction_symmetric_kl": 0.5856179224228474,
+        "seed": 2.0,
+        "best_single_acc": 0.9493,
+        "prediction_disagreement_rate": 0.2973266086497891,
+        "epochs_completed": 50.0,
+        "per_model_acc": [
+          0.9484400000000001,
+          0.77876,
+          0.61002,
+          0.9472799999999999
+        ],
+        "wml_weights": [
+          0.2444622291252017,
+          0.2677654981613159,
+          0.26515052914619447,
+          0.22262174859642983
+        ],
+        "G_int": 0.08615999999999999
+      }
+    },
+    "DiffDML": {
+      "seeds": [
+        {
+          "ensemble_acc": 0.8474,
+          "best_single_acc": 0.8455,
+          "per_model_acc": [
+            0.844,
+            0.8455,
+            0.8429
+          ],
+          "prediction_disagreement_rate": 0.06065400843881857,
+          "prediction_symmetric_kl": 0.030983410960354146,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 2.0413167084319683,
+          "E_d0": null,
+          "representation_dispersion": 0.02762740862237502,
+          "seed": 0,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8441,
+          "best_single_acc": 0.8428,
+          "per_model_acc": [
+            0.8428,
+            0.8402,
+            0.84
+          ],
+          "prediction_disagreement_rate": 0.061939609704641345,
+          "prediction_symmetric_kl": 0.03421462622750158,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 2.0755778415293635,
+          "E_d0": null,
+          "representation_dispersion": 0.02734834982577381,
+          "seed": 1,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8513,
+          "best_single_acc": 0.8476,
+          "per_model_acc": [
+            0.8476,
+            0.847,
+            0.8456
+          ],
+          "prediction_disagreement_rate": 0.060456223628692,
+          "prediction_symmetric_kl": 0.030883472420683893,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 1.9492514661595792,
+          "E_d0": null,
+          "representation_dispersion": 0.022582065538043462,
+          "seed": 2,
+          "epochs_completed": 50,
+          "resumed": false
+        },
+        {
+          "ensemble_acc": 0.8482,
+          "best_single_acc": 0.8474,
+          "per_model_acc": [
+            0.8474,
+            0.8432,
+            0.8445
+          ],
+          "prediction_disagreement_rate": 0.05837948312236285,
+          "prediction_symmetric_kl": 0.03071065754767208,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 1.928034094315541,
+          "E_d0": null,
+          "representation_dispersion": 0.022930381383416774,
+          "seed": 3,
+          "epochs_completed": 50,
+          "resumed": true
+        },
+        {
+          "ensemble_acc": 0.8482,
+          "best_single_acc": 0.8474,
+          "per_model_acc": [
+            0.845,
+            0.8474,
+            0.8443
+          ],
+          "prediction_disagreement_rate": 0.05857726793248944,
+          "prediction_symmetric_kl": 0.031424501132738744,
+          "rho": 0.5,
+          "w": 2.0,
+          "eta": 1.0,
+          "d_star_squared_theory": null,
+          "D_rep": 1.8956128539918344,
+          "E_d0": null,
+          "representation_dispersion": 0.024018111980602712,
+          "seed": 4,
+          "epochs_completed": 50,
+          "resumed": false
+        }
+      ],
+      "mean": {
+        "ensemble_acc": 0.84784,
+        "prediction_symmetric_kl": 0.03164333365779009,
+        "seed": 2.0,
+        "D_rep": 1.9779585928856573,
+        "w": 2.0,
+        "representation_dispersion": 0.024901263470042356,
+        "best_single_acc": 0.8461400000000001,
+        "prediction_disagreement_rate": 0.06000131856540084,
+        "eta": 1.0,
+        "epochs_completed": 50.0,
+        "rho": 0.5,
+        "per_model_acc": [
+          0.84536,
+          0.84466,
+          0.84346
+        ],
+        "G_int": -0.020080000000000032
+      }
+    }
+  },
+  "config_snapshot": {
+    "data_root": "./data",
+    "dataset": "cifar10",
+    "num_classes": 10,
+    "epochs": 50,
+    "seeds": 5,
+    "K": 3,
+    "repr_dim": 64,
+    "batch_size": 128,
+    "workers": 0,
+    "device": "cuda",
+    "lr": 0.1,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "lambda_out": 0.5,
+    "lambda_rep": 0.1,
+    "lambda_div": 0.1,
+    "d0": 1.0,
+    "eta": 1.0,
+    "T": 4.0,
+    "wml_lr": 0.1,
+    "wml_T": 3.0,
+    "wml_alpha": 0.1,
+    "wml_eta": 0.1,
+    "wml_update_w_step": 10,
+    "diffdml_margin": 0.5,
+    "diffdml_lambda_dpl": 1.0,
+    "dts_base_strength": 0.0,
+    "dts_step_strength": 0.15,
+    "synthetic_train_per_class": 200,
+    "synthetic_test_per_class": 40
+  }
+}

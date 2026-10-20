@@ -1,0 +1,4 @@
+* -text
+*.pdf binary
+*.png binary
+# Preserve archived evidence/source bytes for checksum verification.

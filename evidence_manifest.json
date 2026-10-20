@@ -1,0 +1,12 @@
+{
+  "evidence/audit_results.json": "f9f017876e7930997f4ea691df2dfe2b3d91c868e7d278e05a98e7f58046b0bd",
+  "evidence/exp2_2_2_phase_diagram.json": "de3aa287741f269a3bccb3cfc47f8bdbab98b6165eba47151c3f093c22998636",
+  "evidence/exp3_baseline_comparison_cifar10.json": "fff74d08496bb9648400dba29c4d6c954676d1b20bfcc30074098d8a7f327067",
+  "evidence/exp3_cifar100_fixed.json": "3ee7805981f50215c55e84b7095f3ee2b1c7188d1e42f5a1c718326a70b1ecb2",
+  "evidence/exp3_transition.json": "48cf5e2872668af21aae8fc3c446ee46a8f2cb5bdb8ba44919e18cc16cfd759d",
+  "evidence/exp3_transition_cifar10.json": "7209287ad103106a9a67b86b3fec15b5d492be122be5c80cd42f1cc7ffa3542b",
+  "evidence/exp4_operating_point_check.json": "d84f2a1ab6d0ec970bffbdc67dedc23ce49e77533209a949b8f24ec5fda33c93",
+  "evidence/exp5_k_feasibility_cifar10.json": "d20681b81e75bc05c4f41b6cadcc654b670781203ce9c85415f7f2c21f0b9f7b",
+  "evidence/exp6_resnet18.json": "566af8e597326e1db3512c90a75a0909e6ab501375c3114639c555f9581eab21",
+  "evidence/recomputed_summary.json": "fd159b650f5da31d292149b26eb8e5ca9d223e2c6a59148641d321cf38217780"
+}
